@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+
+
+    <div id="app">
+        <!-- v-if serve para remover um elemento na tela -->
+        <div v-if="showTitle">
+            {{ title }}
+        </div>
+
+
+        <div v-else-if="showTitle2">
+            {{ title2 }}
+        </div>
+
+        
+        <!-- v-else serve para executar um teste se o v-if for falso -->
+        <div v-else>
+            Exibindo outro elemento com v-else
+        </div>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+
+                return {
+                    title: 'Hello vue!',
+                    title2: `Estudando Vue.js`,
+                    showTitle: false,
+                    showTitle2: false,
+                }
+            }
+        }).mount('#app')
+    </script>
+
+</body>
+
+</html>
