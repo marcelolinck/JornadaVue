@@ -13,7 +13,8 @@
 
 
     <div id="app">
-        <div>
+        <!-- v-show serve para esconder um elemento na tela -->
+        <div v-show="showTitle">
             {{ title }}
         </div>
     </div>
@@ -23,7 +24,8 @@
             data() {
 
                 return {
-                    title: 'Hello vue!'
+                    title: 'Hello vue!',
+                    showTitle: true
                 }
             }
         }).mount('#app')
