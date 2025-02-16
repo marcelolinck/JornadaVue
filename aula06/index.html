@@ -19,8 +19,8 @@
         </div>
 
         <!-- v-show serve para esconder um elemento na tela -->
-        <div v-else>
-            Exibindo outro elemento com v-else
+        <div v-show="showTitle">
+            {{ title }}
         </div>
     </div>
 
@@ -30,7 +30,7 @@
 
                 return {
                     title: 'Hello vue!',
-                    showTitle: false
+                    showTitle: true
                 }
             }
         }).mount('#app')
